@@ -28,7 +28,7 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td>
-                <asp:Button ID="Button1" runat="server" Text="Login" />
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" />
             </td>
             <td>&nbsp;</td>
         </tr>
