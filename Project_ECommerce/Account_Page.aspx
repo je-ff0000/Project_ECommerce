@@ -10,19 +10,19 @@
     <table class="auto-style1">
         <tr>
             <td>
-                <asp:Button ID="Button1" runat="server" Text="Login" />
+                <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button2" runat="server" Text="Register (User)" />
+                <asp:Button ID="Button2" runat="server" Text="Register (User)" OnClick="Button2_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button3" runat="server" Text="Register (Admin)" />
+                <asp:Button ID="Button3" runat="server" Text="Register (Admin)" OnClick="Button3_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>
