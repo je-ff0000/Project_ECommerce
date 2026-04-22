@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35731.53
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_ECommerce", "Project_ECommerce\Project_ECommerce.csproj", "{3D0028EF-990C-4EEB-91CB-C6795E541CBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{96A789E6-81BF-409E-ACED-048BF6169CC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{BBBE9DAF-2F1D-47C8-82E4-BFF5278654A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D0028EF-990C-4EEB-91CB-C6795E541CBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D0028EF-990C-4EEB-91CB-C6795E541CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D0028EF-990C-4EEB-91CB-C6795E541CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D0028EF-990C-4EEB-91CB-C6795E541CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96A789E6-81BF-409E-ACED-048BF6169CC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96A789E6-81BF-409E-ACED-048BF6169CC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96A789E6-81BF-409E-ACED-048BF6169CC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96A789E6-81BF-409E-ACED-048BF6169CC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBBE9DAF-2F1D-47C8-82E4-BFF5278654A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBBE9DAF-2F1D-47C8-82E4-BFF5278654A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBBE9DAF-2F1D-47C8-82E4-BFF5278654A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBBE9DAF-2F1D-47C8-82E4-BFF5278654A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9EAC6765-DD0A-4367-BB7E-25E667DF3F7B}
+	EndGlobalSection
+EndGlobal
