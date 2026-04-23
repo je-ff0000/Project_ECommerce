@@ -35,7 +35,10 @@
                 </ul>
             </nav>
             <img src="images/shopping-cart.png">
-            
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
         </div>
         <div class="row-1">
             <div class="col-2">
@@ -77,10 +80,6 @@
         </div>
     </div>
 </div>
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
     </form>
 </body>
 </html>
