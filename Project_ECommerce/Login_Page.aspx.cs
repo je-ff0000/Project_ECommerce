@@ -28,7 +28,7 @@ namespace Project_ECommerce
 
                 if (role == "admin")
                 {
-                    Response.Redirect("Admin_Homepage.aspx");
+                    Response.Redirect("AdminHomePage.aspx");
                 }
 
                 else if (role == "user")
