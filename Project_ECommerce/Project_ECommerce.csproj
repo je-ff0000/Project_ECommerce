@@ -71,6 +71,7 @@
     <Content Include="Account_Page.aspx" />
     <Content Include="AddEdit_Category.aspx" />
     <Content Include="AddEdit_Product.aspx" />
+    <Content Include="AdminHomePage.aspx" />
     <Content Include="Admin_Homepage.aspx" />
     <Content Include="Admin_Reg.aspx" />
     <Content Include="images\account-cover-page-2.jpg" />
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="AddEdit_Product.aspx.designer.cs">
       <DependentUpon>AddEdit_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHomePage.aspx.cs">
+      <DependentUpon>AdminHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHomePage.aspx.designer.cs">
+      <DependentUpon>AdminHomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_Homepage.aspx.cs">
       <DependentUpon>Admin_Homepage.aspx</DependentUpon>
