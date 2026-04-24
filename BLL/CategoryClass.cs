@@ -27,5 +27,13 @@ namespace BLL
 
             return ds;
         }
+
+        public DataSet CategoryList()
+        {
+            string str = "select Id, Name from Category_Tab";
+            DataSet ds = objdal.Fn_exeAdapter(str);
+
+            return ds;
+        }
     }
 }
