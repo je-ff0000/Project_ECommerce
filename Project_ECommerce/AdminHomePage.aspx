@@ -13,7 +13,7 @@
     <table class="auto-style1">
         <tr>
             <td class="auto-style2">
-                <asp:Button ID="Button1" runat="server" BackColor="#FF523B" Font-Bold="True" Text="Add/Edit Category" Width="387px" />
+                <asp:Button ID="Button1" runat="server" BackColor="#FF523B" Font-Bold="True" OnClick="Button1_Click" Text="Add/Edit Category" Width="387px" />
             </td>
             <td>
                 <asp:Button ID="Button2" runat="server" BackColor="#FF523B" Font-Bold="True" Text="Add/Edit Product" Width="386px" />
