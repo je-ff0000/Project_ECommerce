@@ -14,19 +14,23 @@ namespace Project_ECommerce
         CategoryClass objbll = new CategoryClass();
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataSet ds = objbll.CategoryList();
-            DropDownList1.DataSource = ds;
-            DropDownList1.DataTextField = "Name";
-            DropDownList1.DataValueField = "Id";
-            DropDownList1.DataBind();
-            if (DropDownList1.Items.Count == 0)
+            if (!IsPostBack)
             {
-                DropDownList1.Items.Insert(0, new ListItem("No Categories Available", "0"));
+                DataSet ds = objbll.CategoryList();
+                DropDownList1.DataSource = ds;
+                DropDownList1.DataTextField = "Name";
+                DropDownList1.DataValueField = "Id";
+                DropDownList1.DataBind();
+                if (DropDownList1.Items.Count == 0)
+                {
+                    DropDownList1.Items.Insert(0, new ListItem("No Categories Available", "0"));
+                }
+                else
+                {
+                    DropDownList1.Items.Insert(0, new ListItem("-- No Parent (Top Level) --", ""));
+                }
             }
-            else
-            {
-                DropDownList1.Items.Insert(0, new ListItem("-- No Parent (Top Level) --", ""));
-            }
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
