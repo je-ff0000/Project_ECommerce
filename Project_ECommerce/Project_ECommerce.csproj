@@ -69,11 +69,10 @@
   <ItemGroup>
     <Content Include="account.html" />
     <Content Include="Account_Page.aspx" />
+    <Content Include="AddEditCategory.aspx" />
     <Content Include="AddEdit_Category.aspx" />
     <Content Include="AddEdit_Product.aspx" />
     <Content Include="AdminHomePage.aspx" />
-    <Content Include="Admin_Homepage.aspx" />
-    <Content Include="Admin_Reg.aspx" />
     <Content Include="images\account-cover-page-2.jpg" />
     <Content Include="images\account-cover-page.jpg" />
     <Content Include="images\Denshi Logo.jpg" />
@@ -89,7 +88,6 @@
     <Content Include="styles.css" />
     <Content Include="HomePage.aspx" />
     <Content Include="UserRegisterPage.aspx" />
-    <Content Include="User_Reg.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +97,13 @@
     </Compile>
     <Compile Include="Account_Page.aspx.designer.cs">
       <DependentUpon>Account_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditCategory.aspx.cs">
+      <DependentUpon>AddEditCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddEditCategory.aspx.designer.cs">
+      <DependentUpon>AddEditCategory.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddEdit_Category.aspx.cs">
       <DependentUpon>AddEdit_Category.aspx</DependentUpon>
@@ -120,20 +125,6 @@
     </Compile>
     <Compile Include="AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_Homepage.aspx.cs">
-      <DependentUpon>Admin_Homepage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin_Homepage.aspx.designer.cs">
-      <DependentUpon>Admin_Homepage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_Reg.aspx.cs">
-      <DependentUpon>Admin_Reg.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin_Reg.aspx.designer.cs">
-      <DependentUpon>Admin_Reg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
@@ -184,13 +175,6 @@
     </Compile>
     <Compile Include="UserRegisterPage.aspx.designer.cs">
       <DependentUpon>UserRegisterPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="User_Reg.aspx.cs">
-      <DependentUpon>User_Reg.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="User_Reg.aspx.designer.cs">
-      <DependentUpon>User_Reg.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

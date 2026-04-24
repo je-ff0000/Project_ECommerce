@@ -46,7 +46,7 @@
             <td>&nbsp;</td>
             <td>Image</td>
             <td>
-                <asp:FileUpload ID="FileUpload1" runat="server" />
+                <asp:FileUpload ID="FileUpload1" runat="server" Width="518px" />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
