@@ -14,21 +14,21 @@
         <tr>
             <td class="auto-style2">Email</td>
             <td>
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox1" runat="server" Width="695px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">Password</td>
             <td>
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox2" runat="server" Width="694px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td>
-                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" />
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" Width="716px" />
             </td>
             <td>&nbsp;</td>
         </tr>
