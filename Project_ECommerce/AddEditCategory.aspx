@@ -48,7 +48,9 @@
             <td>
                 <asp:FileUpload ID="FileUpload1" runat="server" Width="518px" />
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -60,7 +62,9 @@
             <td>
                 <asp:TextBox ID="TextBox2" runat="server" TextMode="MultiLine"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="**" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -93,7 +97,7 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>
-                <asp:Button ID="Button1" runat="server" BackColor="#FF523B" Text="Button" Width="367px" />
+                <asp:Button ID="Button1" runat="server" BackColor="#FF523B" OnClick="Button1_Click" Text="Add" Width="367px" />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -104,7 +108,9 @@
         <tr>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Label ID="Label2" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

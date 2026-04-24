@@ -25,7 +25,28 @@ namespace Project_ECommerce
             }
             else
             {
-                DropDownList1.Items.Insert(0, new ListItem("-- Select Category --", ""));
+                DropDownList1.Items.Insert(0, new ListItem("-- No Parent (Top Level) --", ""));
+            }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (!FileUpload1.HasFile)
+            {
+                Label1.Visible = true;
+                Label1.Text = "Upload Image";
+            }
+
+            else
+            {
+                string path = "~/Category_Photos/" + FileUpload1.FileName;
+                FileUpload1.SaveAs(MapPath(path));
+                int i = objbll.AddCategory(TextBox1.Text, path, TextBox2.Text, DropDownList1.SelectedItem.Value);
+                if (i == 1)
+                {
+                    Label2.Visible = true;
+                    Label2.Text = "Inserted successfully";
+                }
             }
         }
     }
