@@ -21,10 +21,6 @@ namespace DAL
 
         public int Fn_NonQuery(string sqlquery)
         {
-            if (con.State == ConnectionState.Open)
-            {
-                con.Close();
-            }
             cmd = new SqlCommand(sqlquery, con);
             con.Open();
             int i = cmd.ExecuteNonQuery();
@@ -34,10 +30,6 @@ namespace DAL
 
         public string Fn_Scalar(string sqlquery)
         {
-            if (con.State == ConnectionState.Open)
-            {
-                con.Close();
-            }
             cmd = new SqlCommand(sqlquery, con);
             con.Open();
             string i = cmd.ExecuteScalar().ToString();
@@ -47,23 +39,14 @@ namespace DAL
 
         public SqlDataReader Fn_SqlReader(string sqlquery)
         {
-            if (con.State == ConnectionState.Open)
-            {
-                con.Close();
-            }
             cmd = new SqlCommand(sqlquery, con);
             con.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
+            SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             return dr;
         }
 
         public DataSet Fn_exeAdapter(string sqlquery)
         {
-            if (con.State == ConnectionState.Open)
-            {
-                con.Close();
-            }
-
             SqlDataAdapter da = new SqlDataAdapter(sqlquery, con);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -72,11 +55,6 @@ namespace DAL
 
         public DataTable Fn_Exedatatable(string sqlquery)
         {
-            if (con.State == ConnectionState.Open)
-            {
-                con.Close();
-            }
-
             SqlDataAdapter da = new SqlDataAdapter(sqlquery, con);
             DataTable dt = new DataTable();
             da.Fill(dt);
