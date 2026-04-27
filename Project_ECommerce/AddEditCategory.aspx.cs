@@ -29,8 +29,18 @@ namespace Project_ECommerce
                 {
                     DropDownList1.Items.Insert(0, new ListItem("-- No Parent (Top Level) --", ""));
                 }
+
+                Bind_Grid();
+
             }
             
+        }
+
+        public void Bind_Grid()
+        {
+            DataSet ds = objbll.ShowCategories();
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -52,6 +62,15 @@ namespace Project_ECommerce
                     Label2.Text = "Inserted successfully";
                 }
             }
+        }
+
+        protected void GridView1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            Panel1.Visible = true;
+            GridViewRow r = GridView1.Rows[e.NewSelectedIndex];
+            TextBox5.Text = r.Cells[1].Text;
+            TextBox6.Text = r.Cells[3].Text;
+            Image1.ImageUrl = r.Cells[2].Text;
         }
     }
 }
