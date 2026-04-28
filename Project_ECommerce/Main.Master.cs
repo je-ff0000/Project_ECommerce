@@ -11,7 +11,22 @@ namespace Project_ECommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["Role"] != null)
+                {
+                    string role = Session["Role"].ToString();
 
+                    if (role == "Admin")
+                    {
+                        lnkHome.NavigateUrl = "/AdminHomePage.aspx";
+                    }
+                    else if (role == "User")
+                    {
+                        lnkHome.NavigateUrl = "/UserHomePage.aspx";
+                    }
+                }
+            }
         }
     }
 }
