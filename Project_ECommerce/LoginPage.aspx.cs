@@ -28,11 +28,13 @@ namespace Project_ECommerce
 
                 if (role == "admin")
                 {
-                    Response.Redirect("Admin_Homepage.aspx");
+                    Session["Role"] = "Admin";
+                    Response.Redirect("AdminHomepage.aspx");
                 }
 
                 else if (role == "user")
                 {
+                    Session["Role"] = "User";
                     Response.Redirect("User_Homepage.aspx");
                 }
             }
