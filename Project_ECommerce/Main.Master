@@ -27,7 +27,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="/HomePage.aspx">Home</a></li>
+                    <li><asp:HyperLink ID="lnkHome" runat="server" NavigateUrl="/HomePage.aspx" Text="Home" /></li>
                     <li><a href="">Products</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">Contact</a></li>
