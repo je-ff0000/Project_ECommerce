@@ -77,9 +77,10 @@ namespace Project_ECommerce
         {
             string imagePath = Image1.ImageUrl;
 
-            if (FileUpload1.HasFile)
+            if (FileUpload2.HasFile)
             {
-                string path = "~/Category_Photos/" + FileUpload1.FileName;
+                string path = "~/Category_Photos/" + FileUpload2.FileName;
+                FileUpload2.SaveAs(MapPath(path));
                 imagePath = path;
             }
             int id = Convert.ToInt32(ViewState["CategoryId"]);
@@ -87,6 +88,7 @@ namespace Project_ECommerce
 
             if(i == 1)
             {
+                Label3.Visible = true;
                 Label3.Text = "Updated";
                 Bind_Grid();
             }
