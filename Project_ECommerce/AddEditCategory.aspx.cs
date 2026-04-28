@@ -68,9 +68,35 @@ namespace Project_ECommerce
         {
             Panel1.Visible = true;
             GridViewRow r = GridView1.Rows[e.NewSelectedIndex];
-            TextBox5.Text = r.Cells[1].Text;
-            TextBox6.Text = r.Cells[3].Text;
-            Image1.ImageUrl = r.Cells[2].Text;
+            TextBox5.Text = r.Cells[2].Text;
+            TextBox6.Text = r.Cells[4].Text;
+            Image1.ImageUrl = r.Cells[3].Text;
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string imagePath = Image1.ImageUrl;
+
+            if (FileUpload1.HasFile)
+            {
+                string path = "~/Category_Photos/" + FileUpload1.FileName;
+                imagePath = path;
+            }
+            int id = Convert.ToInt32(ViewState["CategoryId"]);
+            int i = objbll.UpdateCategory(TextBox5.Text, TextBox6.Text, imagePath, id);
+
+            if(i == 1)
+            {
+                Label3.Text = "Updated";
+                Bind_Grid();
+            }
+            
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(GridView1.SelectedDataKey.Value);
+            ViewState["CategoryId"] = id;
         }
     }
 }
