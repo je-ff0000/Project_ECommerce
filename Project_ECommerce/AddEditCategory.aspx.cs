@@ -16,24 +16,26 @@ namespace Project_ECommerce
         {
             if (!IsPostBack)
             {
-                DataSet ds = objbll.CategoryList();
-                DropDownList1.DataSource = ds;
-                DropDownList1.DataTextField = "Name";
-                DropDownList1.DataValueField = "Id";
-                DropDownList1.DataBind();
-                if (DropDownList1.Items.Count == 0)
-                {
-                    DropDownList1.Items.Insert(0, new ListItem("No Categories Available", "0"));
-                }
-                else
-                {
-                    DropDownList1.Items.Insert(0, new ListItem("-- No Parent (Top Level) --", ""));
-                }
-
+                LoadCategories();
                 Bind_Grid();
-
             }
-            
+        }
+
+        public void LoadCategories()
+        {
+            DataSet ds = objbll.CategoryList();
+            DropDownList1.DataSource = ds;
+            DropDownList1.DataTextField = "Name";
+            DropDownList1.DataValueField = "Id";
+            DropDownList1.DataBind();
+            if (DropDownList1.Items.Count == 0)
+            {
+                DropDownList1.Items.Insert(0, new ListItem("No Categories Available", "0"));
+            }
+            else
+            {
+                DropDownList1.Items.Insert(0, new ListItem("-- No Parent (Top Level) --", ""));
+            }
         }
 
         public void Bind_Grid()
@@ -60,6 +62,7 @@ namespace Project_ECommerce
                 {
                     Label2.Visible = true;
                     Label2.Text = "Inserted successfully";
+                    LoadCategories();
                 }
             }
         }
