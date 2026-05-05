@@ -70,6 +70,7 @@
     <Content Include="account.html" />
     <Content Include="Account_Page.aspx" />
     <Content Include="AddEditCategory.aspx" />
+    <Content Include="AddEditProduct.aspx" />
     <Content Include="AddEdit_Category.aspx" />
     <Content Include="AddEdit_Product.aspx" />
     <Content Include="AdminHomePage.aspx" />
@@ -104,6 +105,13 @@
     </Compile>
     <Compile Include="AddEditCategory.aspx.designer.cs">
       <DependentUpon>AddEditCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditProduct.aspx.cs">
+      <DependentUpon>AddEditProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddEditProduct.aspx.designer.cs">
+      <DependentUpon>AddEditProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddEdit_Category.aspx.cs">
       <DependentUpon>AddEdit_Category.aspx</DependentUpon>
