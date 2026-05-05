@@ -15,7 +15,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="auto-style1">
         <tr>
-            <td class="auto-style2">ADD PRODUCT</td>
+            <td class="auto-style2"><strong>ADD PRODUCT</strong></td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -41,7 +41,7 @@
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" BackColor="White" ErrorMessage="**" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" BackColor="White" ControlToValidate="TextBox1" ErrorMessage="**" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -51,7 +51,7 @@
                 <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" BackColor="White" ErrorMessage="**" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" BackColor="White" ControlToValidate="TextBox2" ErrorMessage="**" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -71,7 +71,7 @@
                 <asp:TextBox ID="TextBox3" runat="server" Height="59px" TextMode="MultiLine" Width="293px"></asp:TextBox>
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" BackColor="White" ErrorMessage="**" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" BackColor="White" ControlToValidate="TextBox3" ErrorMessage="**" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -81,7 +81,7 @@
                 <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" BackColor="White" ErrorMessage="**" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" BackColor="White" ControlToValidate="TextBox4" ErrorMessage="**" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -91,7 +91,7 @@
                 <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" BackColor="White" ErrorMessage="**" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" BackColor="White" ControlToValidate="TextBox5" ErrorMessage="**" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>

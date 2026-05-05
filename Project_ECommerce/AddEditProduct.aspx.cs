@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 using System.Data;
 using BLL;
 
@@ -48,14 +49,23 @@ namespace Project_ECommerce
 
             else
             {
-                string path = "~/Product_Photos/" + FileUpload1.FileName;
-                FileUpload1.SaveAs(MapPath(path));
-                int i = objpro.AddProduct(TextBox1.Text, TextBox2.Text, path, TextBox3.Text, Convert.ToInt32(TextBox4.Text), Convert.ToInt32(TextBox5.Text));
+                string id = DropDownList1.SelectedValue;
+                string folderPath = "~/Product_Photos/" + id + "/";
+                string physicalPath = Server.MapPath(folderPath);
+                if (!Directory.Exists(physicalPath))
+                {
+                    Directory.CreateDirectory(physicalPath);
+                }
+                string fileName = FileUpload1.FileName;
+                FileUpload1.SaveAs(physicalPath + fileName);
+
+                string dbPath = folderPath + fileName;
+                FileUpload1.SaveAs(physicalPath + fileName);
+                int i = objpro.AddProduct(Convert.ToInt32(id) , TextBox1.Text, TextBox2.Text, dbPath, TextBox3.Text, Convert.ToInt32(TextBox4.Text), Convert.ToInt32(TextBox5.Text));
                 if (i == 1)
                 {
                     Label2.Visible = true;
                     Label2.Text = "Inserted successfully";
-                    LoadCategories();
                 }
             }
         }
