@@ -10,6 +10,12 @@
         .auto-style3 {
             width: 577px;
         }
+        .auto-style4 {
+            width: 283px;
+        }
+        .auto-style5 {
+            width: 493px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -29,7 +35,7 @@
         <tr>
             <td class="auto-style2">Category</td>
             <td class="auto-style3">
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                 </asp:DropDownList>
             </td>
             <td>&nbsp;</td>
@@ -108,6 +114,135 @@
             <td class="auto-style3">
                 <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
             </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2"><strong>EDIT PRODUCT</strong></td>
+            <td class="auto-style3">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2" colspan="3">
+                <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanging="GridView1_SelectedIndexChanging" Width="1091px">
+                    <Columns>
+                        <asp:CommandField ShowSelectButton="True" />
+                    </Columns>
+                </asp:GridView>
+            </td>
+            <td class="auto-style3">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2" colspan="3">
+                <asp:Panel ID="Panel1" runat="server" Width="1110px">
+                    <table class="auto-style1">
+                        <tr>
+                            <td class="auto-style4">Category</td>
+                            <td class="auto-style5">
+                                <asp:TextBox ID="TextBox6" runat="server" Width="436px"></asp:TextBox>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style4">Name</td>
+                            <td class="auto-style5">
+                                <asp:TextBox ID="TextBox7" runat="server" Width="436px"></asp:TextBox>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style4">Brand</td>
+                            <td class="auto-style5">
+                                <asp:TextBox ID="TextBox8" runat="server" Width="436px"></asp:TextBox>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style4">Description</td>
+                            <td class="auto-style5">
+                                <asp:TextBox ID="TextBox9" runat="server" Height="83px" TextMode="MultiLine" Width="377px"></asp:TextBox>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style4">Price</td>
+                            <td class="auto-style5">
+                                <asp:TextBox ID="TextBox10" runat="server" Width="436px"></asp:TextBox>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style4">Stock</td>
+                            <td class="auto-style5">
+                                <asp:TextBox ID="TextBox11" runat="server" Width="436px"></asp:TextBox>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style4">Image</td>
+                            <td class="auto-style5">
+                                <asp:Image ID="Image1" runat="server" Height="155px" Width="286px" />
+                            </td>
+                            <td>
+                                <asp:FileUpload ID="FileUpload2" runat="server" Width="307px" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style4">&nbsp;</td>
+                            <td class="auto-style5">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style4">&nbsp;</td>
+                            <td class="auto-style5">
+                                <asp:Button ID="Button2" runat="server" BackColor="#FF523B" Text="Update" Width="288px" />
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style4">&nbsp;</td>
+                            <td class="auto-style5">
+                                <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </asp:Panel>
+            </td>
+            <td class="auto-style3">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>

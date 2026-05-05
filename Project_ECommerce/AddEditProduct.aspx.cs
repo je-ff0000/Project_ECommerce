@@ -22,6 +22,14 @@ namespace Project_ECommerce
             }
         }
 
+        public void Bind_Grid()
+        {
+            int catid = Convert.ToInt32(DropDownList1.SelectedValue);
+            DataSet ds = objpro.ShowProducts(catid);
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
+        }
+
         public void LoadCategories()
         {
             DataSet ds = objcat.CategoryList();
@@ -68,6 +76,16 @@ namespace Project_ECommerce
                     Label2.Text = "Inserted successfully";
                 }
             }
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Bind_Grid();
+        }
+
+        protected void GridView1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+
         }
     }
 }
