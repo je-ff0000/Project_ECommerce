@@ -12,9 +12,9 @@ namespace BLL
     {
         ConnectionClass objdal = new ConnectionClass();
 
-        public int AddProduct(string name, string brand, string image, string desc, int price, int stock)
+        public int AddProduct(int id, string name, string brand, string image, string desc, int price, int stock)
         {
-            string s = "insert into Products_Tab values('" + name + "','" + brand + "','" + image + "','" + desc + "'," + price + "," + stock + ")";
+            string s = "insert into Products_Tab values(" + id + ",'" + name + "','" + brand + "','" + desc + "'," + price + "," + stock + ",'available','" + image +"')";
             int i = objdal.Fn_NonQuery(s);
 
             return i;
