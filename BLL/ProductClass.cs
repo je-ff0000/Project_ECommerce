@@ -19,5 +19,13 @@ namespace BLL
 
             return i;
         }
+
+        public DataSet ShowProducts(int id)
+        {
+            string str = "select * from Products_Tab where Category_Id =" + id;
+            DataSet ds = objdal.Fn_exeAdapter(str);
+
+            return ds;
+        }
     }
 }
