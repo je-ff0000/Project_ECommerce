@@ -85,7 +85,15 @@ namespace Project_ECommerce
 
         protected void GridView1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
         {
-
+            Panel1.Visible = true;
+            GridViewRow r = GridView1.Rows[e.NewSelectedIndex];
+            TextBox6.Text = DropDownList1.SelectedItem.Text;
+            TextBox7.Text = r.Cells[3].Text;
+            TextBox8.Text = r.Cells[4].Text;
+            TextBox9.Text = r.Cells[5].Text;
+            TextBox10.Text = r.Cells[6].Text;
+            TextBox11.Text = r.Cells[7].Text;
+            Image1.ImageUrl = r.Cells[9].Text;
         }
     }
 }
