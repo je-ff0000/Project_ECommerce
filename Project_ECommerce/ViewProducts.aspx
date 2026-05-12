@@ -17,7 +17,7 @@
                     <ItemTemplate>
                         <table class="auto-style1">
                             <tr>
-                                <td>
+                                <td align="center">
                                     <asp:ImageButton ID="ImageButton1" runat="server" CommandArgument='<%# Eval("Id") %>' Height="162px" ImageUrl='<%# Eval("Image") %>' Width="286px" />
                                 </td>
                                 <td>&nbsp;</td>
@@ -36,14 +36,14 @@
                                 <td>&nbsp;</td>
                             </tr>
                             <tr>
-                                <td>
+                                <td align="center">
                                     <asp:Label ID="Label2" runat="server" Font-Size="Small" Text='<%# Eval("Description") %>'></asp:Label>
                                 </td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
                             </tr>
                             <tr>
-                                <td>
+                                <td align="center">
                                     <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Medium" Text='<%# Eval("Price") %>'></asp:Label>
                                 </td>
                                 <td>&nbsp;</td>
