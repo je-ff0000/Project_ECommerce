@@ -14,9 +14,13 @@ namespace Project_ECommerce
         CategoryClass objbll = new CategoryClass();
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataSet ds = objbll.ShowAvailableCategories();
-            DataList1.DataSource = ds;
-            DataList1.DataBind();
+            if (!IsPostBack)
+            {
+                DataSet ds = objbll.ShowAvailableCategories();
+                DataList1.DataSource = ds;
+                DataList1.DataBind();
+            }
+            
         }
 
         protected void ImageButton1_Command(object sender, CommandEventArgs e)
