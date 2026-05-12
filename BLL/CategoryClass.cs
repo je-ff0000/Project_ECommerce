@@ -28,6 +28,14 @@ namespace BLL
             return ds;
         }
 
+        public DataSet ShowAvailableCategories()
+        {
+            string str = "select * from Category_Tab where Status = 'available'";
+            DataSet ds = objdal.Fn_exeAdapter(str);
+
+            return ds;
+        }
+
         public DataSet CategoryList()
         {
             string str = "select Id, Name from Category_Tab";
