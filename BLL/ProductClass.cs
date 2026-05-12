@@ -28,6 +28,15 @@ namespace BLL
             return ds;
         }
 
+        public DataSet ShowAvailableProducts(int id)
+        {
+            string str = "select * from Products_Tab where Category_Id =" + id + " and Status = 'available'";
+            DataSet ds = objdal.Fn_exeAdapter(str);
+
+            return ds;
+
+        }
+
         public int UpdateProduct(int catid, string name, string brand, string desc, int price, int stock, string image, int prodid)
         {
             string str = "update Products_Tab set Category_Id =" + catid + ", Name = '" + name + "', Brand = '" + brand + "', Description = '" + desc + "', Price =" + price + ", Stock =" + stock + ", Image = '" + image + "' where Id = " + prodid;
