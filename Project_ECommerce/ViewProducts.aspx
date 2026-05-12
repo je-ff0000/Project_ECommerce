@@ -13,7 +13,7 @@
     <table class="auto-style1">
         <tr>
             <td class="auto-style2">
-                <asp:DataList ID="DataList1" runat="server">
+                <asp:DataList ID="DataList1" runat="server" RepeatColumns="5" RepeatDirection="Horizontal">
                     <ItemTemplate>
                         <table class="auto-style1">
                             <tr>
@@ -28,7 +28,7 @@
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
                             </tr>
-                            <tr>
+                            <tr align="center">
                                 <td>
                                     <asp:Label ID="Label1" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
                                 </td>
