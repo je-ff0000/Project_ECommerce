@@ -63,6 +63,7 @@ namespace Project_ECommerce
                     Label2.Visible = true;
                     Label2.Text = "Inserted successfully";
                     LoadCategories();
+                    Bind_Grid();
                 }
             }
         }
