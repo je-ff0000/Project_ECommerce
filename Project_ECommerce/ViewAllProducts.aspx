@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="ViewProducts.aspx.cs" Inherits="Project_ECommerce.ViewProducts" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="ViewAllProducts.aspx.cs" Inherits="Project_ECommerce.ViewProducts" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -11,6 +11,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="auto-style1">
+        <tr>
+            <td class="auto-style2">
+                <asp:LinkButton ID="LinkButton1" runat="server" Font-Size="Small" PostBackUrl="~/UserHomePage.aspx">Back</asp:LinkButton>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
         <tr>
             <td class="auto-style2">
                 <asp:DataList ID="DataList1" runat="server" RepeatColumns="5" RepeatDirection="Horizontal">
@@ -44,7 +50,7 @@
                             </tr>
                             <tr>
                                 <td align="center">
-                                    <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Medium" Text='<%# Eval("Price") %>'></asp:Label>
+                                    ₹<asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Medium" Text='<%# Eval("Price") %>'></asp:Label>
                                 </td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
