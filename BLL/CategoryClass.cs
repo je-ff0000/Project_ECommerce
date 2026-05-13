@@ -30,7 +30,7 @@ namespace BLL
 
         public DataSet ShowAvailableCategories()
         {
-            string str = "select * from Category_Tab where Status = 'available'";
+            string str = "select * from Category_Tab where Status = 'available' and Parent_Id <> 0";
             DataSet ds = objdal.Fn_exeAdapter(str);
 
             return ds;
