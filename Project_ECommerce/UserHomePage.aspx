@@ -15,7 +15,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>
+            <td align="center">
                 <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" GridLines="Both" RepeatDirection="Horizontal" RepeatColumns="5">
                     <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
                     <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
@@ -36,7 +36,9 @@
                             </tr>
                             <tr>
                                 <td align="center">
-                                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("Description") %>'></asp:Label>
+                                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("Description").ToString().Length > 47
+                                                                            ? Eval("Description").ToString().Substring(0,47)+"..."
+                                                                            : Eval("Description").ToString() %>'></asp:Label>
                                 </td>
                                 <td>&nbsp;</td>
                             </tr>
