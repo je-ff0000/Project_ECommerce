@@ -88,7 +88,7 @@
     <Content Include="HomePage.aspx" />
     <Content Include="UserHomePage.aspx" />
     <Content Include="UserRegisterPage.aspx" />
-    <Content Include="ViewProducts.aspx" />
+    <Content Include="ViewAllProducts.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -177,12 +177,12 @@
     <Compile Include="UserRegisterPage.aspx.designer.cs">
       <DependentUpon>UserRegisterPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewProducts.aspx.cs">
-      <DependentUpon>ViewProducts.aspx</DependentUpon>
+    <Compile Include="ViewAllProducts.aspx.cs">
+      <DependentUpon>ViewAllProducts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewProducts.aspx.designer.cs">
-      <DependentUpon>ViewProducts.aspx</DependentUpon>
+    <Compile Include="ViewAllProducts.aspx.designer.cs">
+      <DependentUpon>ViewAllProducts.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
