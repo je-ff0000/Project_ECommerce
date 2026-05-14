@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Data.SqlClient;
 using DAL;
 
 namespace BLL
@@ -35,6 +36,13 @@ namespace BLL
 
             return ds;
 
+        }
+
+        public SqlDataReader ShowProductDetails(int id)
+        {
+            string str = "select * from Products_Tab where Id =" + id;
+            SqlDataReader dr = objdal.Fn_SqlReader(str);
+            return dr;
         }
 
         public int UpdateProduct(int catid, string name, string brand, string desc, int price, int stock, string image, int prodid)
