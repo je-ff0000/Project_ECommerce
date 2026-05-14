@@ -23,5 +23,12 @@ namespace Project_ECommerce
             }
             
         }
+
+        protected void ImageButton1_Command(object sender, CommandEventArgs e)
+        {
+            int prodid = Convert.ToInt32(e.CommandArgument);
+            Session["ProductId"] = prodid;
+            Response.Redirect("ViewProduct.aspx");
+        }
     }
 }

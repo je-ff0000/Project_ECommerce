@@ -24,7 +24,7 @@
                         <table class="auto-style1">
                             <tr>
                                 <td align="center">
-                                    <asp:ImageButton ID="ImageButton1" runat="server" CommandArgument='<%# Eval("Id") %>' Height="162px" ImageUrl='<%# Eval("Image") %>' Width="286px" />
+                                    <asp:ImageButton ID="ImageButton1" runat="server" CommandArgument='<%# Eval("Id") %>' Height="162px" ImageUrl='<%# Eval("Image") %>' Width="286px" OnCommand="ImageButton1_Command" />
                                 </td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
