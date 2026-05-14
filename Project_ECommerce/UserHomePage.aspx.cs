@@ -27,7 +27,7 @@ namespace Project_ECommerce
         {
             int catid = Convert.ToInt32(e.CommandArgument);
             Session["CategoryId"] = catid;
-            Response.Redirect("ViewProducts.aspx");
+            Response.Redirect("ViewAllProducts.aspx");
         }
     }
 }
