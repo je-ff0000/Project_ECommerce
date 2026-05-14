@@ -89,6 +89,7 @@
     <Content Include="UserHomePage.aspx" />
     <Content Include="UserRegisterPage.aspx" />
     <Content Include="ViewAllProducts.aspx" />
+    <Content Include="ViewProduct.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +184,13 @@
     </Compile>
     <Compile Include="ViewAllProducts.aspx.designer.cs">
       <DependentUpon>ViewAllProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProduct.aspx.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewProduct.aspx.designer.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
