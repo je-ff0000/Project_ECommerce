@@ -22,10 +22,34 @@ namespace BLL
 
         public DataSet ShowCategories()
         {
-            string str = "select Name, Image, Description, Status from Category_Tab";
+            string str = "select * from Category_Tab";
             DataSet ds = objdal.Fn_exeAdapter(str);
 
             return ds;
+        }
+
+        public DataSet ShowAvailableCategories()
+        {
+            string str = "select * from Category_Tab where Status = 'available' and Parent_Id <> 0";
+            DataSet ds = objdal.Fn_exeAdapter(str);
+
+            return ds;
+        }
+
+        public DataSet CategoryList()
+        {
+            string str = "select Id, Name from Category_Tab";
+            DataSet ds = objdal.Fn_exeAdapter(str);
+
+            return ds;
+        }
+
+        public int UpdateCategory(string name, string desc, string path, int id)
+        {
+            string str = "update Category_Tab set Name = '" + name + "', Description = '" + desc + "', Image = '" + path + "' where Id = " + id;
+            int i = objdal.Fn_NonQuery(str);
+
+            return i;
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Project_ECommerce
 {
-    public partial class AddEdit_Product : System.Web.UI.Page
+    public partial class ViewCart : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

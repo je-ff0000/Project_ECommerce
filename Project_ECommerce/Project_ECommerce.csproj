@@ -69,11 +69,9 @@
   <ItemGroup>
     <Content Include="account.html" />
     <Content Include="Account_Page.aspx" />
-    <Content Include="AddEdit_Category.aspx" />
-    <Content Include="AddEdit_Product.aspx" />
+    <Content Include="AddEditCategory.aspx" />
+    <Content Include="AddEditProduct.aspx" />
     <Content Include="AdminHomePage.aspx" />
-    <Content Include="Admin_Homepage.aspx" />
-    <Content Include="Admin_Reg.aspx" />
     <Content Include="images\account-cover-page-2.jpg" />
     <Content Include="images\account-cover-page.jpg" />
     <Content Include="images\Denshi Logo.jpg" />
@@ -88,8 +86,11 @@
     <Content Include="AdminRegisterPage.aspx" />
     <Content Include="styles.css" />
     <Content Include="HomePage.aspx" />
+    <Content Include="UserHomePage.aspx" />
     <Content Include="UserRegisterPage.aspx" />
-    <Content Include="User_Reg.aspx" />
+    <Content Include="ViewAllProducts.aspx" />
+    <Content Include="ViewCart.aspx" />
+    <Content Include="ViewProduct.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -100,19 +101,19 @@
     <Compile Include="Account_Page.aspx.designer.cs">
       <DependentUpon>Account_Page.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddEdit_Category.aspx.cs">
-      <DependentUpon>AddEdit_Category.aspx</DependentUpon>
+    <Compile Include="AddEditCategory.aspx.cs">
+      <DependentUpon>AddEditCategory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddEdit_Category.aspx.designer.cs">
-      <DependentUpon>AddEdit_Category.aspx</DependentUpon>
+    <Compile Include="AddEditCategory.aspx.designer.cs">
+      <DependentUpon>AddEditCategory.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddEdit_Product.aspx.cs">
-      <DependentUpon>AddEdit_Product.aspx</DependentUpon>
+    <Compile Include="AddEditProduct.aspx.cs">
+      <DependentUpon>AddEditProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddEdit_Product.aspx.designer.cs">
-      <DependentUpon>AddEdit_Product.aspx</DependentUpon>
+    <Compile Include="AddEditProduct.aspx.designer.cs">
+      <DependentUpon>AddEditProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminHomePage.aspx.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
@@ -120,20 +121,6 @@
     </Compile>
     <Compile Include="AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_Homepage.aspx.cs">
-      <DependentUpon>Admin_Homepage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin_Homepage.aspx.designer.cs">
-      <DependentUpon>Admin_Homepage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_Reg.aspx.cs">
-      <DependentUpon>Admin_Reg.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin_Reg.aspx.designer.cs">
-      <DependentUpon>Admin_Reg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
@@ -178,6 +165,13 @@
     <Compile Include="AdminRegisterPage.aspx.designer.cs">
       <DependentUpon>AdminRegisterPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserHomePage.aspx.cs">
+      <DependentUpon>UserHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserHomePage.aspx.designer.cs">
+      <DependentUpon>UserHomePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserRegisterPage.aspx.cs">
       <DependentUpon>UserRegisterPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -185,12 +179,26 @@
     <Compile Include="UserRegisterPage.aspx.designer.cs">
       <DependentUpon>UserRegisterPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User_Reg.aspx.cs">
-      <DependentUpon>User_Reg.aspx</DependentUpon>
+    <Compile Include="ViewAllProducts.aspx.cs">
+      <DependentUpon>ViewAllProducts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User_Reg.aspx.designer.cs">
-      <DependentUpon>User_Reg.aspx</DependentUpon>
+    <Compile Include="ViewAllProducts.aspx.designer.cs">
+      <DependentUpon>ViewAllProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCart.aspx.cs">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewCart.aspx.designer.cs">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProduct.aspx.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewProduct.aspx.designer.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

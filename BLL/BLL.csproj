@@ -46,6 +46,7 @@
     <Compile Include="InsertAdminClass.cs" />
     <Compile Include="InsertUserClass.cs" />
     <Compile Include="LoginClass.cs" />
+    <Compile Include="ProductClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
