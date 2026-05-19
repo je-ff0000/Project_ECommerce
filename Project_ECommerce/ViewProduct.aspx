@@ -13,12 +13,25 @@
         .auto-style4 {
             width: 564px;
         }
+        .auto-style5 {
+            width: 384px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="auto-style1">
         <tr>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style2">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+            </td>
+            <td class="auto-style4">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">
+                <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/ViewAllProducts.aspx">Back</asp:LinkButton>
+            </td>
             <td class="auto-style4">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -46,10 +59,8 @@
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style4">&nbsp;<asp:Button ID="Button3" runat="server" BorderColor="Black" Height="43px" Text="-" Width="56px" />
-&nbsp;
-                <asp:TextBox ID="TextBox1" runat="server" BorderColor="Black" CssClass="auto-style3" Height="43px" Width="100px" OnTextChanged="TextBox1_TextChanged" onkeypress="return isNumber(event)" AutoPostBack="True" style="text-align: center"></asp:TextBox>
-
+            <td class="auto-style4">&nbsp;&nbsp;
+                
                 <script>
                     function isNumber(evt) {
                         var charCode = evt.which ? evt.which : evt.keyCode;
@@ -62,9 +73,24 @@
                     }
                 </script>
 &nbsp;
-                <asp:Button ID="Button4" runat="server" BorderColor="Black" Height="43px" Text="+" Width="56px" />
-            &nbsp;
-                <asp:Label ID="Label4" runat="server" Text="Label" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <table class="auto-style1">
+                            <tr>
+                                <td class="auto-style5">
+                                    <asp:Button ID="Button3" runat="server" BorderColor="Black" Height="43px" OnClick="Button3_Click" Text="-" Width="56px" />
+                                    &nbsp;&nbsp;<asp:TextBox ID="TextBox1" runat="server" AutoPostBack="True" BorderColor="Black" CssClass="auto-style3" Height="43px" onkeypress="return isNumber(event)" OnTextChanged="TextBox1_TextChanged" style="text-align: center" Width="100px">1</asp:TextBox>
+&nbsp;
+                                    <asp:Button ID="Button4" runat="server" BorderColor="Black" Height="43px" OnClick="Button4_Click" Text="+" Width="56px" />
+                                </td>
+                                <td>
+                                    <asp:Label ID="Label4" runat="server" Text="Label" Visible="False"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
             </td>
             <td>
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="*Digits only*" ForeColor="#CC0000" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
