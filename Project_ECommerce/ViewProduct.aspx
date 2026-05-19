@@ -101,7 +101,7 @@
             <td class="auto-style4">
                 <asp:Button ID="Button1" runat="server" BackColor="#FF523B" BorderColor="Black" Text="Buy Now" Width="260px" />
 &nbsp;
-                <asp:Button ID="Button2" runat="server" BackColor="#FFCC00" BorderColor="Black" Text="Add To Cart" Width="261px" />
+                <asp:Button ID="Button2" runat="server" BackColor="#FFCC00" BorderColor="Black" Text="Add To Cart" Width="261px" OnClick="Button2_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>

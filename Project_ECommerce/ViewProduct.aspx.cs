@@ -94,5 +94,10 @@ namespace Project_ECommerce
                 Label4.Text = "";
             }
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
