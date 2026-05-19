@@ -27,5 +27,38 @@ namespace Project_ECommerce
                 }
             }
         }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            Page.Validate();
+
+            if (!Page.IsValid)
+            {
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(TextBox1.Text))
+            {
+                int enteredQty;
+                int prodid = Convert.ToInt32(Session["ProductId"]);
+                string stock = objbll.GetStock(prodid);
+                int availableStock = Convert.ToInt32(stock);
+
+                if(int.TryParse(TextBox1.Text, out enteredQty))
+                {
+                    if (enteredQty > availableStock)
+                    {
+                        Label4.Visible = true;
+                        Label4.Text = "Maximum stock available: " + stock;
+                        TextBox1.Text = stock;
+                    }
+
+                    else
+                    {
+                        Label4.Text = "";
+                    }
+                }
+            }
+        }
     }
 }
