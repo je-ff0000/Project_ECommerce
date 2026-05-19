@@ -89,6 +89,7 @@
     <Content Include="UserHomePage.aspx" />
     <Content Include="UserRegisterPage.aspx" />
     <Content Include="ViewAllProducts.aspx" />
+    <Content Include="ViewCart.aspx" />
     <Content Include="ViewProduct.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -184,6 +185,13 @@
     </Compile>
     <Compile Include="ViewAllProducts.aspx.designer.cs">
       <DependentUpon>ViewAllProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCart.aspx.cs">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewCart.aspx.designer.cs">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
