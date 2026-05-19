@@ -25,6 +25,8 @@ namespace Project_ECommerce
                     Label2.Text = dr["Description"].ToString();
                     Label3.Text = dr["Price"].ToString();
                 }
+
+                dr.Close();
             }
         }
 
