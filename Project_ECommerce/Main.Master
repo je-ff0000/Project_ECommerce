@@ -34,7 +34,9 @@
                     <li><a href="/Account_Page.aspx">Account</a></li>
                 </ul>
             </nav>
-            <img src="images/shopping-cart.png">
+            <asp:HyperLink ID="lnkCart" runat="server" NavigateUrl="/ViewCart.aspx">
+                <img src="images/shopping-cart.png" alt="Cart" />
+            </asp:HyperLink>
         </div>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
