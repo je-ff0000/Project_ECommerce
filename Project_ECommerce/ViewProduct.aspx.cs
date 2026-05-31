@@ -11,13 +11,14 @@ namespace Project_ECommerce
 {
     public partial class ViewProduct : System.Web.UI.Page
     {
-        ProductClass objbll = new ProductClass();
+        ProductClass objpro = new ProductClass();
+        CartClass objcart = new CartClass();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 int prodid = Convert.ToInt32(Session["ProductId"]);
-                SqlDataReader dr = objbll.ShowProductDetails(prodid);
+                SqlDataReader dr = objpro.ShowProductDetails(prodid);
                 while (dr.Read())
                 {
                     Image1.ImageUrl = dr["Image"].ToString();
@@ -41,7 +42,7 @@ namespace Project_ECommerce
             {
                 int enteredQty;
                 int prodid = Convert.ToInt32(Session["ProductId"]);
-                string stock = objbll.GetStock(prodid);
+                string stock = objpro.GetStock(prodid);
                 int availableStock = Convert.ToInt32(stock);
 
                 if(int.TryParse(TextBox1.Text, out enteredQty))
@@ -56,6 +57,8 @@ namespace Project_ECommerce
                     else
                     {
                         Label4.Text = "";
+                        Button2.Text = "Add To Cart";
+                        Button2.BackColor = System.Drawing.Color.FromArgb(255, 52, 59);
                     }
                 }
             }
@@ -63,17 +66,20 @@ namespace Project_ECommerce
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            int quantity;
             int prodid = Convert.ToInt32(Session["ProductId"]);
 
-            int availableStock = Convert.ToInt32(objbll.GetStock(prodid));
+            int availableStock = Convert.ToInt32(objpro.GetStock(prodid));
 
-            if (int.TryParse(TextBox1.Text, out quantity))
+            if (int.TryParse(TextBox1.Text, out int quantity))
             {
-                if(quantity < availableStock)
+                Button2.Text = "Add To Cart";
+                Button2.BackColor = System.Drawing.Color.FromArgb(255, 204, 0);
+
+                if (quantity < availableStock)
                 {
                     TextBox1.Text = (quantity + 1).ToString();
                     Label4.Text = "";
+                    
                 }
                 else if(quantity == availableStock)
                 {
@@ -86,18 +92,33 @@ namespace Project_ECommerce
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            int quantity;
-
-            if (int.TryParse(TextBox1.Text, out quantity) && quantity - 1 > 0)
+            if (int.TryParse(TextBox1.Text, out int quantity) && quantity - 1 > 0)
             {
                 TextBox1.Text = (quantity - 1).ToString();
                 Label4.Text = "";
+                Button2.Text = "Add To Cart";
+                Button2.BackColor = System.Drawing.Color.FromArgb(255, 204, 0);
             }
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            int prodId = Convert.ToInt32(Session["Productid"]);
+            int custId = Convert.ToInt32(Session["RegId"]);
+            int quantity = Convert.ToInt32(TextBox1.Text);
+            
+            int i = objcart.AddItemToCart(prodId, custId, quantity, "Active");
 
+            if(i == 1)
+            {
+                Button2.Text = "Added To Cart";
+                Button2.BackColor = System.Drawing.Color.FromArgb(210, 220, 60);
+            }
+            else
+            {
+                Label5.Visible = true;
+                Label5.Text = "Couldn't add to cart";
+            }
         }
     }
 }

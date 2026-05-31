@@ -5,18 +5,18 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 693px;
+            width: 834px;
         }
     .auto-style3 {
         margin-top: 0px;
     }
         .auto-style4 {
-            width: 564px;
+            width: 666px;
         }
         .auto-style5 {
             width: 384px;
         }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="auto-style1">
@@ -70,7 +70,7 @@
                         }
 
                         return true;
-                    }
+                    }                          
                 </script>
 &nbsp;
                 &nbsp;
@@ -88,6 +88,13 @@
                                     <asp:Label ID="Label4" runat="server" Text="Label" Visible="False"></asp:Label>
                                 </td>
                             </tr>
+                            <tr>
+                                <td class="auto-style5" colspan="2">
+                                    <asp:Button ID="Button1" runat="server" BackColor="#FF523B" BorderColor="Black" Text="Buy Now" Width="260px" />
+                                    <asp:Button ID="Button2" runat="server" BackColor="#FFCC00" BorderColor="Black" OnClick="Button2_Click" Text="Add To Cart" Width="261px" />
+                                </td>
+                                
+                            </tr>
                         </table>
                     </ContentTemplate>
                 </asp:UpdatePanel>
@@ -99,15 +106,15 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">
-                <asp:Button ID="Button1" runat="server" BackColor="#FF523B" BorderColor="Black" Text="Buy Now" Width="260px" />
 &nbsp;
-                <asp:Button ID="Button2" runat="server" BackColor="#FFCC00" BorderColor="Black" Text="Add To Cart" Width="261px" OnClick="Button2_Click" />
+                                    </td>
+            <td>
+                <asp:Label ID="Label5" runat="server" Text="Label" Visible="False"></asp:Label>
             </td>
-            <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style4">&nbsp; </td>
             <td>&nbsp;</td>
         </tr>
     </table>
