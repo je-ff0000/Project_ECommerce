@@ -32,9 +32,13 @@ namespace DAL
         {
             cmd = new SqlCommand(sqlquery, con);
             con.Open();
-            string i = cmd.ExecuteScalar().ToString();
+            object obj = cmd.ExecuteScalar();
             con.Close();
-            return i;
+            if(obj == null || obj == DBNull.Value)
+            {
+                return null;
+            }
+            return obj.ToString();
         }
 
         public SqlDataReader Fn_SqlReader(string sqlquery)

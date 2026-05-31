@@ -22,7 +22,7 @@ namespace Project_ECommerce
             if (cid == "1")
             {
                 string id = objbll.GetId(TextBox1.Text, TextBox2.Text);
-                Session["uid"] = id;
+                Session["RegId"] = id;
                 string role = objbll.UserOrAdmin(Convert.ToInt32(id));
                 Label1.Text = role;
 
@@ -35,7 +35,8 @@ namespace Project_ECommerce
                 else if (role == "user")
                 {
                     Session["Role"] = "User";
-                    Response.Redirect("User_Homepage.aspx");
+
+                    Response.Redirect("UserHomepage.aspx");
                 }
             }
 
